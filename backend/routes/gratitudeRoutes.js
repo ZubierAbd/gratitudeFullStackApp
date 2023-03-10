@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 
-const { getAllGrats, getRandomGrat, getAllCount, setGrat, updateGrat, deleteGrat } = require('../controllers/gratController')
+const { getAllGrats, getRandomGrat, getAllCount, setGrat, updateGrat, deleteGrat, getGratById } = require('../controllers/gratController')
 
 router.get('/', getAllGrats);
+
+router.get('/:id', getGratById);
 
 router.get('/random', getRandomGrat);
 

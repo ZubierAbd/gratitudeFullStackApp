@@ -7,6 +7,15 @@ const getAllGrats = asyncHandler(async (req, res) => {
     res.status(200).json(grats)
 })
 
+const getGratById = asyncHandler(async (req, res) => {
+    const grat = await Grat.findById(req.params.id);
+    if (!grat) {
+        res.status(400)
+        throw new Error('Please add a text field')
+    }
+    res.status(200).json(grat)
+})
+
 const getAllCount = asyncHandler(async (req, res) => {
     const grats = await Grat.find()
 
@@ -61,6 +70,7 @@ module.exports = {
     getAllGrats,
     getRandomGrat,
     getAllCount,
+    getGratById,
     setGrat,
     updateGrat,
     deleteGrat
