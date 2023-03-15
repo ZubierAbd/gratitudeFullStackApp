@@ -9,6 +9,8 @@ import { GratserviceService } from './gratservice.service';
 export class AppComponent {
   title = 'gratitudeapp';
   myForm: FormGroup;
+  userName: string;
+  userGrat: string;
 
   gratefulQuotes = [
     {
@@ -225,6 +227,21 @@ export class AppComponent {
     this.gs.getAllGrats().subscribe(data => {
       this.allGrats = data;
     });
+  }
+
+  setGrat() {
+    if (!this.userGrat) {
+      return;
+    }
+    let body = {
+      text: this.userGrat,
+      name: this.userName ? this.userName : 'Anonymous'
+    }
+    this.gs.setGrat(body).subscribe((res) => {
+      this.getAllGrats();
+      this.userGrat = '';
+      this.userName = '';
+    })
   }
 
 }

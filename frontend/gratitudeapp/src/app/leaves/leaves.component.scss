@@ -1,0 +1,79 @@
+@keyframes fall {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
+
+.leaf {
+    width: 10px;
+    height: 10px;
+    background-color: #f6e05e;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+.animate-fall-1 {
+    animation-duration: 8s;
+    left: 5%;
+    bottom: -20px;
+}
+
+.animate-fall-2 {
+    animation-duration: 7s;
+    left: 15%;
+    bottom: -20px;
+}
+
+.animate-fall-3 {
+    animation-duration: 6s;
+    left: 25%;
+    bottom: -20px;
+}
+
+.animate-fall-4 {
+    animation-duration: 5s;
+    left: 35%;
+    bottom: -20px;
+}
+
+.animate-fall-5 {
+    animation-duration: 4s;
+    left: 45%;
+    bottom: -20px;
+}
+
+.animate-fall-6 {
+    animation-duration: 3s;
+    left: 55%;
+    bottom: -20px;
+}
+
+.animate-fall-7 {
+    animation-duration: 7s;
+    left: 65%;
+    bottom: -20px;
+}
+
+.animate-fall-8 {
+    animation-duration: 6s;
+    left: 75%;
+    bottom: -20px;
+}
+
+.animate-fall-9 {
+    animation-duration: 5s;
+    left: 85%;
+    bottom: -20px;
+}
+
+.animate-fall-10 {
+    animation-duration: 4s;
+    left: 95%;
+    bottom: -20px;
+}

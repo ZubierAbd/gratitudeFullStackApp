@@ -8,9 +8,59 @@
 html,
 body {
     height: 100%;
+    background-color: $primary-color;
 }
 
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+    font-family: 'Bahiana';
+    src: url('../src/assets/fonts/Bahiana/Bahiana-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: AmitaReg;
+    src: url('./assets/fonts/Amita/Amita-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: AmitaBold;
+    src: url('./assets/fonts/Amita/Amita-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.amitar {
+    font-family: AmitaReg;
+}
+
+.amitab {
+    font-family: AmitaBold;
+}
+
+.bahiana {
+    font-family: 'Bahiana';
+}
+
+.bg-prime {
+    background-color: $primary-color;
+}
+
+.bg-sec {
+    background-color: $secondary-color;
+}
+
+:hover.bg-sec {
+    background-color: $accent2
+}
+
+.bg-acc1 {
+    background-color: $accent1;
 }
