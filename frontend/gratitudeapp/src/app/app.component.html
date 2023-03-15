@@ -32,7 +32,7 @@
     </div>
 
     <div class="flex justify-center">
-        <button (click)="setGrat()"
+        <button (click)="setGrat()" [disabled]="!userGrat"
             class="bg-sec text-white font-bold py-2 px-4 rounded-full transform transition duration-200 ease-in-out hover:scale-105">
             Submit what you are grateful for
         </button>

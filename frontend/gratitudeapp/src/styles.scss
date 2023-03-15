@@ -57,6 +57,10 @@ body {
     background-color: $secondary-color;
 }
 
+:disabled.bg-sec {
+    background-color: $accent2
+}
+
 :hover.bg-sec {
     background-color: $accent2
 }
