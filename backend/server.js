@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/grats', require('./routes/gratitudeRoutes'))
+app.use('/api/users', require('./routes/userRoute'))
 
 // app.use(errorHandler);
 
