@@ -4,9 +4,9 @@
     <app-quote-box [quote]="selectedQuote"></app-quote-box>
 
 
-    <p class="py-4">
-        There are so many things in life to be grateful for. Why not write something down and share it with the world?
-        If you want to remain anonymous, please keep the name field blank
+    <p class="p-10 text-gray-700 text-xl">
+        There are so many things going on in our life which we can learn to love and appreciate. Feel free to see what
+        others are grateful for and if you want to submit your own gratitudes to the universe, please register.
     </p>
 
     <div class="shadow-md rounded-m overflow-hidden p mb-5 columns-2">
@@ -39,16 +39,16 @@
     </div>
 
 
-    <h4>See what other people are grateful for</h4>
+    <h4 class="text-xl">See what other people are grateful for</h4>
 
     <section *ngIf="allGrats.length" class="columns-2 gap-8">
         <div *ngFor="let grat of allGrats">
-            <div class="hover:bg-blue-600 bg-blue-300 shadow-md rounded-lg overflow-hidden mb-3 opacity-70 transform transition duration-200 ease-in-out
+            <div class="hover:bg-[#1C5FA0] bg-PC4 shadow-md rounded-lg overflow-hidden mb-3 transform transition duration-200 ease-in-out
                 hover:scale-105">
                 <div class="p-4 mx-auto">
-                    <h3 class="font-bold text-xl mb-2">Gratitude by {{grat.name}}</h3>
-                    <p class="text-gray-700 text-base">{{grat.text}}</p>
-                    <p class="text-gray-700 text-base">{{grat.createdAt | date: 'mediumDate'}}</p>
+                    <h3 class="font-bold text-3xl mb-2 text-gray-900">Gratitude by {{grat.name}}</h3>
+                    <p class="text-gray-800 text-base">{{grat.text}}</p>
+                    <p class="text-gray-800 text-base">{{grat.createdAt | date: 'mediumDate'}}</p>
                 </div>
             </div>
 

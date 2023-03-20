@@ -10,6 +10,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuoteBoxComponent } from './quote-box/quote-box.component';
 import { LeavesComponent } from './leaves/leaves.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LeavesComponent } from './leaves/leaves.component';
     AppComponent,
     NavbarComponent,
     QuoteBoxComponent,
-    LeavesComponent
+    LeavesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
