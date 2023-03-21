@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { QuoteBoxComponent } from './quote-box/quote-box.component';
 import { LeavesComponent } from './leaves/leaves.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { LoginComponent } from './login/login.component';
     NavbarComponent,
     QuoteBoxComponent,
     LeavesComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

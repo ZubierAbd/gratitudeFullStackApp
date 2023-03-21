@@ -1,0 +1,60 @@
+<div>
+    <app-quote-box [quote]="selectedQuote"></app-quote-box>
+    <p class="p-10 text-gray-700 text-xl">
+        There are so many things going on in our life which we can learn to love and appreciate. Feel free to see what
+        others are grateful for and if you want to submit your own gratitudes to the universe, please register.
+    </p>
+
+
+
+
+    <div class="shadow-md rounded-m overflow-hidden p mb-5 columns-2">
+        <form [formGroup]="myForm">
+            <div>
+                <label>
+                    Name:
+                    <input type="text" formControlName="name" [(ngModel)]="userName"
+                        class="border border-gray-300 focus:border-blue-500 rounded-md py-2 px-4 block w-full placeholder-gray-500"
+                        placeholder="Enter your name">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Text:
+                    <input type="text" formControlName="text" [(ngModel)]="userGrat"
+                        class="border border-gray-300 focus:border-blue-500 rounded-md py-2 px-4 block w-full placeholder-gray-500"
+                        placeholder="Enter your name">
+                </label>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="flex justify-center">
+        <button (click)="setGrat()" [disabled]="!userGrat"
+            class="bg-sec text-white font-bold py-2 px-4 rounded-full transform transition duration-200 ease-in-out hover:scale-105">
+            Submit what you are grateful for
+        </button>
+    </div>
+
+
+    <h4 class="text-xl">See what other people are grateful for</h4>
+
+    <section *ngIf="allGrats.length" class="columns-2 gap-8">
+        <div *ngFor="let grat of allGrats">
+            <div class="hover:bg-[#1C5FA0] bg-PC4 shadow-md rounded-lg overflow-hidden mb-3 transform transition duration-200 ease-in-out
+                hover:scale-105">
+                <div class="p-4 mx-auto">
+                    <h3 class="font-bold text-3xl mb-2 text-gray-900">Gratitude by {{grat.name}}</h3>
+                    <p class="text-gray-800 text-base">{{grat.text}}</p>
+                    <p class="text-gray-800 text-base">{{grat.createdAt | date: 'mediumDate'}}</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="p-20">
+
+    </div>
+</div>

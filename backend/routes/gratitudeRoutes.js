@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { protect } = require('../middleware/authmiddleware')
 
-const { getAllGrats, getOwnGrats, getRandomGrat, getAllCount, setGrat, updateGrat, deleteGrat, getGratById } = require('../controllers/gratController')
+const { getAllGrats, getOwnGrats, getRandomGrat, getAllCount,
+    setGrat, updateGrat, deleteGrat, getGratById } = require('../controllers/gratController')
 
 router.get('/', getAllGrats);
 

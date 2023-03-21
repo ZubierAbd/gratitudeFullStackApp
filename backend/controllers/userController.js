@@ -12,7 +12,9 @@ const loginUser = asyncHandler(async (req, res) => {
             _id: user.id,
             name: user.name,
             email: user.email,
-            token: generateToken(user.id)
+            token: generateToken(user.id),
+            expiresIn: '30'
+
         })
     } else {
         res.status(400)
@@ -61,7 +63,8 @@ const registerUser = asyncHandler(async (req, res) => {
             _id: user.id,
             name: user.name,
             email: user.email,
-            token: generateToken(user.id)
+            token: generateToken(user.id),
+            expiresIn: '30'
         })
     }
     else {
