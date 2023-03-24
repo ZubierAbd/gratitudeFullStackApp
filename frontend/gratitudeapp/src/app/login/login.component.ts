@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserService } from '../user.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  constructor(private us: UserService) { }
+  constructor(private us: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.myForm = new FormGroup({
@@ -25,13 +26,12 @@ export class LoginComponent implements OnInit {
   login() {
     const email = this.email;
     const password = this.password;
-    console.log('we hitting this')
 
     this.us.loginUser({
       email,
       password
     }).subscribe((res) => {
-      console.log(res)
+      this.router.navigate([''])
     })
   }
 }

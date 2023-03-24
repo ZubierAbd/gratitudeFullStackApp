@@ -17,7 +17,7 @@ export class UserService {
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
   }
 
-  private logout() {
+  public logout() {
     localStorage.removeItem('id_token')
     localStorage.removeItem("expires_at");
   }
