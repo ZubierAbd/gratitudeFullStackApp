@@ -6,36 +6,41 @@
     </p>
 
 
+    <button (click)="test()">
+        Test
+    </button>
 
+    <div>
+        <div class="shadow-md rounded-m overflow-hidden p mb-5 columns-2">
+            <form [formGroup]="myForm">
+                <div>
+                    <label>
+                        Name:
+                        <input type="text" formControlName="name" [(ngModel)]="userName"
+                            class="border border-gray-300 focus:border-blue-500 rounded-md py-2 px-4 block w-full placeholder-gray-500"
+                            placeholder="Enter your name">
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Text:
+                        <input type="text" formControlName="text" [(ngModel)]="userGrat"
+                            class="border border-gray-300 focus:border-blue-500 rounded-md py-2 px-4 block w-full placeholder-gray-500"
+                            placeholder="Enter your name">
+                    </label>
+                </div>
+            </form>
 
-    <div class="shadow-md rounded-m overflow-hidden p mb-5 columns-2">
-        <form [formGroup]="myForm">
-            <div>
-                <label>
-                    Name:
-                    <input type="text" formControlName="name" [(ngModel)]="userName"
-                        class="border border-gray-300 focus:border-blue-500 rounded-md py-2 px-4 block w-full placeholder-gray-500"
-                        placeholder="Enter your name">
-                </label>
-            </div>
-            <div>
-                <label>
-                    Text:
-                    <input type="text" formControlName="text" [(ngModel)]="userGrat"
-                        class="border border-gray-300 focus:border-blue-500 rounded-md py-2 px-4 block w-full placeholder-gray-500"
-                        placeholder="Enter your name">
-                </label>
-            </div>
-        </form>
+        </div>
 
+        <div class="flex justify-center">
+            <button (click)="setGrat()" [disabled]="!userGrat"
+                class="bg-sec text-white font-bold py-2 px-4 rounded-full transform transition duration-200 ease-in-out hover:scale-105">
+                Submit what you are grateful for
+            </button>
+        </div>
     </div>
 
-    <div class="flex justify-center">
-        <button (click)="setGrat()" [disabled]="!userGrat"
-            class="bg-sec text-white font-bold py-2 px-4 rounded-full transform transition duration-200 ease-in-out hover:scale-105">
-            Submit what you are grateful for
-        </button>
-    </div>
 
 
     <h4 class="text-xl">See what other people are grateful for</h4>

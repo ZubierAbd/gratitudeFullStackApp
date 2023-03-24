@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { GratserviceService } from '../gratservice.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-home',
@@ -240,7 +241,9 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  constructor(private gs: GratserviceService) { }
+  constructor(private gs: GratserviceService, public us: UserService) { }
 
-
+  test() {
+    this.us.isLoggedIn()
+  }
 }
