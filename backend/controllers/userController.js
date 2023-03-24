@@ -13,7 +13,7 @@ const loginUser = asyncHandler(async (req, res) => {
             name: user.name,
             email: user.email,
             token: generateToken(user.id),
-            expiresIn: '30'
+            expiresIn: '12'
 
         })
     } else {
@@ -64,7 +64,7 @@ const registerUser = asyncHandler(async (req, res) => {
             name: user.name,
             email: user.email,
             token: generateToken(user.id),
-            expiresIn: '30'
+            expiresIn: '12'
         })
     }
     else {
@@ -76,7 +76,7 @@ const registerUser = asyncHandler(async (req, res) => {
 const generateToken = (id) => {
     return jwt.sign({
         id
-    }, process.env.JWT_SECRET, { expiresIn: '30' })
+    }, process.env.JWT_SECRET, { expiresIn: '12h' })
 }
 
 module.exports = {

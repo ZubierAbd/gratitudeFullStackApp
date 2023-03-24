@@ -11,7 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   private setSession(authResult: any) {
-    const expiresAt = moment().add(authResult.expiresIn, 'days');
+    const expiresAt = moment().add(authResult.expiresIn, 'hours');
 
     localStorage.setItem('id_token', authResult.token);
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()));
@@ -27,7 +27,7 @@ export class UserService {
   }
 
   getExpiration() {
-    const expiration = localStorage.getItem("expires_at") || "30";
+    const expiration = localStorage.getItem("expires_at") || "";
     const expiresAt = JSON.parse(expiration);
     return moment(expiresAt);
   }

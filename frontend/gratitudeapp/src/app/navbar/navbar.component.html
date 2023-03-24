@@ -1,10 +1,11 @@
 <nav class="flex justify-between py-12">
     <a routerLink="/"><span class="flex-none text-6xl text-gray-800 font-bold bahiana">Gratitude Journal</span></a>
     <span class="ml-auto">
-        <a routerLink="/login" *ngIf="!isLoggedIn"><span class="text-6xl text-gray-800 font-bold bahiana "> Login
+        <a routerLink="/login" *ngIf="!us.isLoggedIn()"><span class="text-6xl text-gray-800 font-bold bahiana "> Login
             </span></a>
 
-        <a *ngIf="isLoggedIn" (click)="logout()"><span class="text-6xl text-gray-800 font-bold bahiana cursor-pointer">
+        <a *ngIf="us.isLoggedIn()" (click)="logout()"><span
+                class="text-6xl text-gray-800 font-bold bahiana cursor-pointer">
                 Logout
             </span></a>
         <a routerLink="/register"><span class="text-6xl  text-gray-800 font-bold bahiana">Register</span></a>

@@ -13,6 +13,8 @@ import { LeavesComponent } from './leaves/leaves.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from 'src/app-http-interceptor';
 
 
 @NgModule({
@@ -35,7 +37,13 @@ import { RegisterComponent } from './register/register.component';
     MatCardModule,
     MatDividerModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
