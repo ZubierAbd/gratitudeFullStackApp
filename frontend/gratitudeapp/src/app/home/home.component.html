@@ -6,11 +6,7 @@
     </p>
 
 
-    <!-- <button (click)="test()">
-        Test
-    </button> -->
-
-    <div>
+    <div *ngIf="us.isLoggedIn()">
         <div class="shadow-md rounded-m overflow-hidden p mb-5 columns-2">
             <form [formGroup]="myForm">
                 <div>
@@ -60,6 +56,10 @@
     </section>
 
     <div class="p-20">
+
+        <button (click)="test()">
+            test
+        </button>
 
     </div>
 </div>

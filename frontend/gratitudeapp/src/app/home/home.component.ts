@@ -245,5 +245,6 @@ export class HomeComponent implements OnInit {
 
   test() {
     this.us.isLoggedIn()
+    console.log(this.us.isLoggedIn())
   }
 }

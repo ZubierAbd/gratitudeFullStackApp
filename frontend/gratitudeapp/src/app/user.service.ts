@@ -27,7 +27,7 @@ export class UserService {
   }
 
   getExpiration() {
-    const expiration = localStorage.getItem("expires_at") || "";
+    const expiration = localStorage.getItem("expires_at") || "0";
     const expiresAt = JSON.parse(expiration);
     return moment(expiresAt);
   }
